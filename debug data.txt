@@ -1,0 +1,30 @@
+0-1000  84min
+1001-1500 47 min
+1501-1991 85min
+2100-2487 100min
+2488-2980 54min
+2993-4000 129min
+4001-4179  23 min
+
+total posting size:13958643712
+input buffer number: 4050
+input buffer 0.3MB
+output buffer 400MB
+total memory 2400MB
+
+the compression format looks like
+[2Byte for chunk_size]
+[4bytes uncompressed last doc_id]
+[1bytes posting size]
+[compressed doc_id]
+[compressed frequency]
+[compressed positions]
+[tags]
+
+-Xms2400m -Xmx2400m
+
+merge 80min
+
+ave document size 306
+
+sudo vi /etc/init.d/tomcat
